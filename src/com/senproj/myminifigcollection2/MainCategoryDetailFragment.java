@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.senproj.myminifigcollection2.dummy.DummyContent;
+import com.senproj.myminifigcollection2.categories.CategoryContent;
 
 /**
  * A fragment representing a single MainCategory detail screen. This fragment is
@@ -24,7 +24,7 @@ public class MainCategoryDetailFragment extends Fragment {
 	/**
 	 * The dummy content this fragment is presenting.
 	 */
-	private DummyContent.DummyItem mItem;
+	private CategoryContent.CategoryItem mItem;
 
 	/**
 	 * Mandatory empty constructor for the fragment manager to instantiate the
@@ -38,10 +38,10 @@ public class MainCategoryDetailFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 
 		if (getArguments().containsKey(ARG_ITEM_ID)) {
-			// Load the dummy content specified by the fragment
+			// Load the Category content specified by the fragment
 			// arguments. In a real-world scenario, use a Loader
 			// to load content from a content provider.
-			mItem = DummyContent.ITEM_MAP.get(getArguments().getString(
+			mItem = CategoryContent.ITEM_MAP.get(getArguments().getString(
 					ARG_ITEM_ID));
 		}
 	}

@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.content.Context;
 
-import com.senproj.myminifigcollection2.dummy.DummyContent;
+import com.senproj.myminifigcollection2.categories.CategoryContent;
 
 /**
  * A list fragment representing a list of MainCategories. This fragment also
@@ -71,13 +71,13 @@ public class MainCategoryListFragment extends ListFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		//call to initialize DummyContent ITEMS from database
-		DummyContent.setContext(getActivity());
+		//call to initialize CategoryContent ITEMS (Main Category List) from database
+		CategoryContent.setContext(getActivity());
 
 		// TODO: replace with a real list adapter.
-		setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
+		setListAdapter(new ArrayAdapter<CategoryContent.CategoryItem>(getActivity(),
 				android.R.layout.simple_list_item_activated_1,
-				android.R.id.text1, DummyContent.ITEMS));
+				android.R.id.text1, CategoryContent.ITEMS));
 	}
 
 	@Override
@@ -120,7 +120,7 @@ public class MainCategoryListFragment extends ListFragment {
 
 		// Notify the active callbacks interface (the activity, if the
 		// fragment is attached to one) that an item has been selected.
-		mCallbacks.onItemSelected(DummyContent.ITEMS.get(position).id);
+		mCallbacks.onItemSelected(CategoryContent.ITEMS.get(position).id);
 	}
 
 	@Override
