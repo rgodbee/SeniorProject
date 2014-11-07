@@ -3,7 +3,7 @@ SeniorProject
 
 Mini-figure Collection App
 
-Contributores:
+Contributors:
 Richard Bradley, 
 Bo Hu, 
 Miranda Coman, 
